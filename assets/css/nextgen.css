@@ -364,3 +364,64 @@ body {
     z-index: 100;
   }
 }
+
+/* Interactive Background Elements */
+.bg-interactive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg-void);
+}
+
+.aura {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  will-change: transform;
+  transform: translate3d(var(--mouse-x, 0), calc(var(--mouse-y, 0) + var(--scroll-y, 0)), 0);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.aura-1 {
+  width: 60vw;
+  height: 60vw;
+  background: var(--accent-primary);
+  top: -20%;
+  left: -10%;
+}
+
+.aura-2 {
+  width: 40vw;
+  height: 40vw;
+  background: var(--accent-secondary);
+  bottom: -10%;
+  right: -5%;
+}
+
+.aura-3 {
+  width: 80vw;
+  height: 80vw;
+  background: #1e1b4b;
+  top: 30%;
+  left: 20%;
+  opacity: 0.15;
+}
+
+.mouse-glow {
+  position: fixed;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -5;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
