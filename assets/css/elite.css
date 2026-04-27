@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-main: #020617;
+  --bg-secondary: #0f172a;
+  --bg-accent: #1e293b;
+  --accent-primary: #6366f1;
+  --accent-secondary: #10b981;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glow-indigo: rgba(99, 102, 241, 0.15);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Hero Section Transformation */
+#hero {
+  background: radial-gradient(circle at top right, var(--glow-indigo), transparent),
+              radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero:before {
+  display: none; /* Remove template overlay */
+}
+
+#hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+#hero .typed {
+  color: var(--accent-primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+
+/* Sidebar / Nav Refactor */
+#header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid var(--glass-border);
+}
+
+.nav-menu a {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+}
+
+.nav-menu a i {
+  font-size: 1.2rem;
+}
+
+.nav-menu a:hover, .nav-menu .active {
+  color: var(--accent-primary) !important;
+}
+
+.nav-menu .active i {
+  color: var(--accent-primary);
+}
+
+/* Sections General */
+section {
+  padding: 100px 0;
+}
+
+.section-bg {
+  background-color: var(--bg-secondary);
+}
+
+.section-title h2 {
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.section-title h2::after {
+  background: var(--accent-primary) !important;
+}
+
+/* Bento Grid Portfolio */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  margin-bottom: 0 !important;
+}
+
+.portfolio-wrap {
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-secondary) !important;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-wrap:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-info {
+  background: linear-gradient(to top, rgba(2, 6, 23, 0.9), transparent) !important;
+  padding: 2rem !important;
+}
+
+.portfolio-info h4 {
+  color: var(--text-primary) !important;
+  font-size: 1.25rem !important;
+}
+
+.portfolio-info p {
+  color: var(--text-secondary) !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem !important;
+}
+
+/* Featured Project Styling */
+.featured-project {
+  grid-column: span 2;
+  border: 2px solid var(--accent-primary);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .featured-project {
+    grid-column: span 1;
+  }
+}
+
+.featured-project::after {
+  content: 'FEATURED';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.notely-card::after {
+  background: var(--accent-secondary) !important;
+}
+
+.notely-card .portfolio-wrap {
+  border-color: var(--accent-secondary) !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+/* Progress Bars (Skills) */
+.skills .progress {
+  background: var(--bg-accent) !important;
+  border-radius: 8px !important;
+  height: 12px !important;
+  margin-bottom: 20px;
+}
+
+.skills .progress-bar {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)) !important;
+}
+
+.skills .skill {
+  color: var(--text-secondary) !important;
+}
+
+/* Resume Styling */
+.resume .resume-item {
+  border-left-color: var(--accent-primary) !important;
+}
+
+.resume .resume-item::before {
+  background: var(--bg-main) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.resume .resume-item h4 {
+  color: var(--accent-primary) !important;
+}
+
+.resume .resume-item h5 {
+  background: var(--bg-accent) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Facts Section Fixes */
+#facts, .facts, #facts .count-box, .facts .count-box {
+  background-color: #0f172a !important;
+  background: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+#facts .count-box, .facts .count-box {
+  border: 1px solid rgba(148, 163, 184, 0.1) !important;
+  box-shadow: none !important;
+}
+
+#facts .count-box span, .facts .count-box span {
+  color: #f8fafc !important;
+}
+
+#facts .count-box p, .facts .count-box p {
+  color: #ffffff !important;
+}
+
+/* Contact Section Fixes */
+#contact, .contact,
+#contact .info, .contact .info, 
+#contact .php-email-form, .contact .php-email-form,
+#contact .info .address, .contact .info .address,
+#contact .info .email, .contact .info .email,
+#contact .info .phone, .contact .info .phone {
+  background-color: #0f172a !important;
+  background: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+#contact .info i, .contact .info i {
+  background-color: #1e293b !important;
+  color: #6366f1 !important;
+}
+
+#contact .info i:hover, .contact .info i:hover {
+  background-color: #6366f1 !important;
+  color: #ffffff !important;
+}
+
+/* Footer Section Fixes */
+#footer, footer, section#footer {
+  background-color: #020617 !important;
+  background: #020617 !important;
+  border-top: 1px solid rgba(148, 163, 184, 0.1) !important;
+}
+
+#footer h3, #footer p, #footer .social-links a i,
+footer h3, footer p, footer .social-links a i {
+  color: #f8fafc !important;
+}
+
+#footer .social-links a, footer .social-links a {
+  background-color: #1e293b !important;
+}
+
+#footer .social-links a:hover, footer .social-links a:hover {
+  background-color: #6366f1 !important;
+}
+
+/* General Section Background Reset */
+section, .section-bg, .portfolio, .about, .resume, .services, .testimonials {
+  background-color: var(--bg-main) !important;
+}
+
+section:nth-child(even), .section-bg {
+  background-color: var(--bg-secondary) !important;
+}

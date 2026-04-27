@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/elite.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume - v4.10.0
@@ -33,6 +34,25 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    /* Critical Dark Theme Overrides - Nuclear Option */
+    body, section, .section-bg, .portfolio, .about, .resume, .services, .testimonials, #facts, #contact, #footer, footer {
+      background-color: #020617 !important;
+      color: #f8fafc !important;
+    }
+    section:nth-child(even), .section-bg, #facts, #contact, .facts .count-box, .contact .info, .contact .php-email-form {
+      background-color: #0f172a !important;
+    }
+    .facts .count-box, .contact .info, .contact .php-email-form {
+      border: 1px solid rgba(148, 163, 184, 0.1) !important;
+    }
+    #facts .count-box p, .facts .count-box p, .skills .skill {
+      color: #ffffff !important; /* Set to white for high contrast */
+    }
+    #footer, footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.1) !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,11 +79,14 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Chris Asarhasa</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Developer, Android Engineer, Android Developer, Software Engineer, Mobile Developer, Mobile Engineer"></span></p>
+      <p>Building <span class="typed" data-typed-items="World-Class Android Apps, Scalable Mobile Architecture, High-Performance Kotlin Apps, Data-Driven Solutions, Open-Source Tools"></span></p>
       <div class="social-links">
         <a href="https://twitter.com/chrisroid" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://github.com/chrisroid" target="_blank" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://www.linkedin.com/in/christianasarhasa2019" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="mt-4">
+        <a href="#portfolio" class="btn btn-outline-primary px-4 py-2">View Technical Work</a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -116,25 +139,25 @@
         <div class="row justify-content-center">
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Years of Work Experience</p>
+              <i class="bi bi-code-square"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter" style="color: #ffffff !important;"></span>
+              <p style="color: #ffffff !important;">Years of Engineering</p>
             </div>
           </div>
     
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Live Projects</p>
+              <i class="bi bi-cpu"></i>
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter" style="color: #ffffff !important;"></span>
+              <p style="color: #ffffff !important;">Production Apps</p>
             </div>
           </div>
     
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
-              <i class="bi bi-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Speaker at Tech Events</p>
+              <i class="bi bi-terminal"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter" style="color: #ffffff !important;"></span>
+              <p style="color: #ffffff !important;">Technical Talks</p>
             </div>
           </div>
         </div>
@@ -160,7 +183,7 @@
 
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>>Displaying collection of my work, showcasing my skills and achievements in the Android Development field</p>
+          <p>A collection of technical solutions across fintech, edtech, and open-source ecosystems, focusing on scalable architecture and performance.</p>
         </div>
 
         <div class="row">
@@ -172,14 +195,54 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
+          <div class="col-lg-7 col-md-12 portfolio-item filter-app featured-project">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/ourlgamoney.png" class="img-fluid" alt="OurLgaMoney Dashboard">
+              <div class="portfolio-info">
+                <h4>OurLgaMoney.com</h4>
+                <p>Next.js | Supabase | Python | Pandas</p>
+                <div class="portfolio-links">
+                  <a href="https://ourlgamoney.com" target="_blank" title="Live Site"><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 portfolio-item filter-app featured-project notely-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/notely.png" class="img-fluid" alt="Notely Voice AI">
+              <div class="portfolio-info">
+                <h4>Notely Voice AI</h4>
+                <p>Kotlin Multiplatform | On-Device ML</p>
+                <div class="portfolio-links">
+                  <a href="https://notelyvoice.ai" target="_blank" title="Website"><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/blupay.png" class="img-fluid" alt="Blupay POS">
+              <div class="portfolio-info">
+                <h4>Blupay POS</h4>
+                <p>Flutter | POS SDK | Fintech</p>
+                <div class="portfolio-links">
+                  <a href="https://play.google.com/store/apps/details?id=com.blupenguin.blupay" target="_blank" title="Play Store"><i class="bx bx-link-external"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/niishpay.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <a href="niish-pay.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
                 <h4>Niish Pay</h4>
+                <p>Kotlin | Fintech | Wallet SDK</p>
                 <div class="portfolio-links">
-                  <i class="bx bx-link"></i>
+                  <a href="niish-pay.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                 </div>
               </a>
               </div>
@@ -192,8 +255,9 @@
               <div class="portfolio-info">
                 <a href="ascom-pay.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Recipe Diary Details">
                 <h4>Ascom Pay</h4>
+                <p>React Native | Payment Gateway</p>
                 <div class="portfolio-links">
-                  <i class="bx bx-link"></i>
+                  <a href="ascom-pay.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Ascom Pay Details"><i class="bx bx-link"></i></a>
                 </div>
               </a>
               </div>
@@ -202,45 +266,30 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/arliiva.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/klica_ocr.png" class="img-fluid" alt="Klica Image to Text">
               <div class="portfolio-info">
-                <a href="arliiva.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Arliiva - Image to Text">
-                <h4>Arliiva</h4>
+                <h4>Klica Image to Text</h4>
+                <p>Kotlin | OCR | AI Scanner</p>
                 <div class="portfolio-links">
-                  <i class="bx bx-link"></i>
+                  <a href="https://klica.ng/apps/" target="_blank" title="Website"><i class="bx bx-link-external"></i></a>
                 </div>
-                </a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/waec.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/nuring.png" class="img-fluid" alt="Nuring App">
               <div class="portfolio-info">
-                <a href="waec.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Music Player Details">
-                <h4>Waec Past Questions App</h4>
+                <h4>Nuring</h4>
+                <p>React Native | HealthTech | Community</p>
                 <div class="portfolio-links">
-                  <i class="bx bx-link"></i>
+                  <a href="https://play.google.com/store/apps/details?id=com.nuring.app" target="_blank" title="Play Store"><i class="bx bx-link-external"></i></a>
                 </div>
-              </a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/jamb.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <a href="jamb.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Music Player Details"></a>
-                <h4>Jamb Past Questions App</h4>
-                <div class="portfolio-links">
-                  <i class="bx bx-link"></i>
-                </div>
-              </a>
-              </div>
-            </div>
-          </div>
 
         </div>
 
@@ -262,21 +311,21 @@
                 <div class="progress">
                   <span class="skill">Kotlin <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">Java <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">XML <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
@@ -287,21 +336,21 @@
                 <div class="progress">
                   <span class="skill">Jetpack Compose <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">Kotlin Multiplatform <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">SQL and Databases <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
@@ -312,21 +361,21 @@
                 <div class="progress">
                   <span class="skill">Firebase <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">Retrofit <i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
                 <div class="progress">
                   <span class="skill">VCS(Git)<i class="val">100%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
                   </div>
                 </div>
     
